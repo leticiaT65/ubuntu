@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> 
+    <!--Escreva aqui as modificações de cada Versão:
+
+    v1.0: Criação do site e escrita a 
+    
+    
+    v1.2 Imagens e conteúdo main
+
+    v1.3 Adição de um botão que responde a resolução do dispositivo móvel
+    
+    -->
+<head> 
+    <link rel="stylesheet" href="css/index.css">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>UBUNTU</title>
+</head> 
+<body>
+   
+<header>
+
+    
+ <h1> Início</h1>   
+</header>
+
+
+<button class="menu-toggle">...</button>
+
+<nav>
+    <div class="tbotoes">
+        <a href="projetos.html" class="botoes">
+            <img src="https://cdn-icons-png.flaticon.com/512/816/816236.png" alt="Início">
+            <p>Projetos</p>
+        </a>
+        <a href="person.html" class="botoes">
+            <img src="https://www.svgheart.com/wp-content/uploads/2021/11/black-woman-face-africa-map-free-svg-file-SvgHeart.Com.png" alt="Projetos">
+            <p>Personalidades</p>
+        </a>
+        <a href="quiz.html" class="botoes">
+            <img src="https://cdn-icons-png.flaticon.com/512/158/158236.png" alt="Personalidades">
+            <p>Quiz</p>
+        </a>
+       
+        </a>
+    </div>
+</nav>
+
+<main>
+    <h2>UBUNTU</h2>
+    <p>Inform[atica</p>
+</main>
+
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    
+    menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+</script>
+
+<aside>
+    
+</aside>
+
+
+
+</body>
+</html>
+

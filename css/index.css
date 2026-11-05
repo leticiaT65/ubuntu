@@ -1,0 +1,346 @@
+ /* v1.2 Concertamos a estrutura básica do site. Adicionamos a paleta de cores definitiva. Reformas o conteúdo nav, os botões do nav e os botões do nav. Também adicionamos um block MAIN e adicionamos conteúdo dentro dela. Data de modificação: 04/11/2026 7:40 até as 8:55.
+ 
+ v1.3 REMAKE GERAL no site, pois os pixels não contribuiram com a responsividade so site ent realmente como o caio havia falaod, tem que usar porcentagme, REM, e VH e VW. 
+ Adicionados MEDIA QUERIES. Cada media querie detecta a resolução do dispositivo por si só, e muda um elemento quando for acessado nesse tamanho (espero que de pra entender...)
+ Adição de menu-toggle. É só o botão que ativa quando ele for chamado...
+ também não mexer no display e no transform no media querie de 700+, é por causa dessa propriedade que tá funcionando... plmds.
+
+
+ 
+ 
+ 
+ 
+ 
+ */
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+ * {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+html {
+min-height: 100%;
+font-size: 16px;
+}
+body {
+min-height: 100vh;
+background: linear-gradient(160deg, #692A23, #0F121F);
+background-attachment: fixed;
+font-family: Arial, sans-serif;
+color: white;
+overflow-x: hidden;
+}
+
+header {
+width: 100%;
+padding: 1.5rem;
+background: linear-gradient(160deg, #812c23, #501e45);
+border-radius: 6px;
+box-shadow: 0 0 30px #180120;
+text-align: center;
+position: relative;
+z-index: 10;
+}
+header h1 {
+font-size: clamp(2rem, 5vw, 3rem);
+margin-bottom: 0.5rem;
+}
+header p {
+font-size: clamp(0.9rem, 2vw, 1.2rem);
+}
+
+.menu-toggle {
+display: none;
+position: fixed;
+top: 1rem;
+left: 1rem;
+background: rgb(110, 52, 42);
+color: white;
+border: none;
+padding: 0.8rem 1.2rem;
+font-size: 1.5rem;
+border-radius: 6px;
+cursor: pointer;
+z-index: 100;
+box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+
+nav {
+position: fixed;
+top: 0;
+left: 0;
+width: 200px;
+height: 100vh;
+padding: 1.5rem;
+background-color: rgb(110, 52, 42);
+box-shadow: 0 0 25px #000000;
+z-index: 50;
+overflow-y: auto;
+transition: transform 0.3s ease;
+}
+.tbotoes {
+display: flex;
+flex-direction: column;
+gap: 1rem;
+margin-top: 2rem;
+}
+.botoes {
+width: 100%;
+background-color: rgb(199, 164, 154);
+border: 4px solid #46253c;
+border-radius: 10px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-decoration: none;
+padding: 1rem;
+transition: transform 0.3s ease-in-out;
+min-height: 120px;
+}
+.tbotoes p {
+color: rgb(7, 0, 15);
+text-decoration: none;
+font-family: fantasy;
+text-align: center;
+margin-top: 0.5rem;
+font-size: 1rem;
+}
+.botoes img {
+width: 60px;
+height: 60px;
+object-fit: contain;
+border-radius: 10px;
+margin-bottom: 0.5rem;
+}
+.botoes:hover {
+transform: scale(1.06);
+}
+
+main {
+margin-left: 220px;
+margin-top: 2rem;
+margin-right: 2rem;
+padding: 2rem;
+border: 8px solid #704b63;
+background-color: #7f6786;
+border-radius: 10px;
+min-height: calc(100vh - 200px);
+}
+main h2 {
+font-size: clamp(1.5rem, 4vw, 2.5rem);
+margin-bottom: 1rem;
+}
+main p {
+font-size: clamp(1rem, 2vw, 1.2rem);
+line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+nav {
+width: 180px;
+}
+
+main {
+    margin-left: 200px;
+    margin-right: 1rem;
+}
+
+.botoes {
+    min-height: 100px;
+}
+
+}
+
+@media (max-width: 768px) {
+.menu-toggle {
+display: block;
+}
+
+nav {
+    transform: translateX(-100%);
+    width: 250px;
+}
+
+nav.active {
+ transform: translate(0);
+}
+
+main {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 5rem;
+}
+
+header {
+    padding: 1rem;
+}
+
+.tbotoes {
+    margin-top: 4rem;
+}
+
+}
+
+@media (max-width: 480px) {
+header h1 {
+font-size: 2rem;
+}
+
+main {
+    padding: 1rem;
+    border-width: 5px;
+}
+
+.botoes {
+    min-height: 90px;
+    padding: 0.8rem;
+}
+
+.botoes img {
+    width: 50px;
+    height: 50px;
+}
+}
+
+
+
+
+
+
+
+/*  > > > > > > CÓDIGO ANTIGO NAO APAGUE
+
+
+
+* {
+    box-sizing: border-box; 
+}
+
+html {
+    min-height: 100%; 
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(160deg, #692A23, #0F121F);
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    margin: 0;
+    padding: 30px;
+   background: linear-gradient(160deg, #812c23, #501e45);
+    border-radius: 6px;
+    box-shadow: 0 0 30px #180120;
+    text-align: center;
+    z-index: 10;
+    position: absolute;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 48px;
+}
+
+nav {
+    position: fixed;
+    height: 1440px;
+    width: 200px;
+    padding: 20px;
+    background-color: rgb(110, 52, 42);
+    gap: 10px;          
+    box-shadow: 0 0 25px #000000;
+    z-index: 1;
+}
+
+
+.tbotoes {
+
+margin-top: 360px ;
+
+
+}
+
+.botoes{
+
+    
+width:150px;
+height:200px;
+background-color:rgb(199, 164, 154);
+border: 6px solid #46253c ;
+border-radius: 10px;
+display: inline-block;
+text-decoration: none;
+padding: 12px;
+transition: 0.3s ease-in-out;
+margin: 10px;
+margin-top: 30px;
+
+}
+
+.tbotoes p{
+
+color: rgb(7, 0, 15);
+text-decoration: none;
+font-family: fantasy;
+margin-top: -10px;
+text-align: center;
+
+}
+
+
+
+
+.botoes:hover {
+  transform: scale(1.06);
+
+
+}
+
+
+main{
+    text-align: center;
+    border: 10px solid #704b63 ;
+    margin-top: 150px;
+    margin-right: 40px;
+    float: right;
+width: 670px;
+height: 1500px;
+background-color: #7f6786;
+
+
+}
+article{
+width: 800px;
+height: 100px;
+float:right;
+background-color: rgb(255, 196, 0);
+
+}
+img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+*/
