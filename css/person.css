@@ -1,0 +1,37 @@
+/* 
+OBS: Use semântica quando possível
+
+Escreva aqui as modificações de cada versão do css 
+
+v1: 
+
+
+*/
+* {
+    background-color: #156064;
+
+
+
+
+
+    }
+
+header{
+
+    width: 400rem;
+    background-color: #00c49a;
+    height: 10rem;
+    margin-left: -10px;
+    display: flex;
+    justify-content: center;
+  
+
+}
+
+header h1 {
+
+  font-size: 300px;
+
+
+
+}

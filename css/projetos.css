@@ -1,0 +1,117 @@
+/* 
+OBS: Use semântica quando possível
+
+Escreva aqui as modificações de cada versão do css 
+
+V1: Nessa versão foi Criada o header, o nav e o main, também foi colocado a imgem de fundo no body
+
+V1.1:Reajustei a centralização do main além de aumentar a altura para que ficasse melhor para colocar o contéudo, também foi criado um quadro de section para colocar os botões do nav, usei um margin-top para poder criar um espaçamento entre cada um dos quadros, usei o footer para fazer um local para colocar 2 sections para usar como botões para trafegar entre paginas alem de aplicar a imagem de fundo, também dentro do main e dos outros quadros com exeção dos sections, complementei os sections colocando um hover em cada e colocando um transition para que o hover tivesse um animação mais suave
+
+V1.3.5:Reajuste da velocidade do aumento de tamanho no botões do section, adição da propriedade pra quando ficar responsoivo manter tamanho igual
+
+deixar responsivo
+*/
+body{
+    background-image: url("../imagens/bg1.png");
+    background-repeat:repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #0F121F;
+    padding-left:2px;
+}
+
+header{
+    width: 85%;
+    height: 200px;
+    background-color: #692A23;
+    border: 6px solid #D5AB21;
+    border-radius: 30px;
+    float: center;
+     background-image: url("../imagens/bg1.png");
+    background-repeat:repeat;
+    background-size: cover;
+    background-position: center;
+}
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    width: 85%;
+    height: 110px;
+    background-color: #692A23;
+    border: 6px solid #D5AB21;
+    border-radius: 30px;
+    float: center;
+    margin-top: 10px;
+     background-image: url("../imagens/bg1.png");
+    background-repeat:repeat;
+    background-size: cover;
+    background-position: center;
+}
+main{
+    width: 95%;
+    height: 3500px; 67
+    background-color: #692A23;
+    border: 6px solid #D5AB21;
+    border-radius: 30px;
+    float: center;
+    margin-top: 10px;
+     background-image: url("../imagens/bg1.png");
+    background-repeat:repeat;
+    background-size: cover;
+    background-position: center;
+}
+section{
+    width: 250px;
+    height: 75px;
+    background-color: #692A23;
+    border: 6px solid #D5AB21;
+    border-radius: 30px;
+    float: left;
+    margin-top: 10px;
+    transition: 0.2s;
+}
+#ir{
+    float: center;
+    width: 500px;
+}
+#texto{
+    width: 80%;
+    height: 3000px;
+
+
+}
+section:hover{
+    scale: 1.2;
+}
+footer{
+ width: 100%;
+  display: flex;
+    justify-content: center;
+    height: 110px;
+    background-color: #692A23;
+    border: 6px solid #D5AB21;
+    border-radius: 30px;
+    float: center;
+    margin-top: 10px;
+     background-image: url("../imagens/bg1.png");
+    background-repeat:repeat;
+    background-size: cover;
+    background-position: center;
+    }
+
+
+@media (max-width: 1024px) {
+
+section {
+width: 100px;
+
+
+    }
+
+#ir{
+    float: center;
+    width: 100px;
+    }
+     
+    
+}
